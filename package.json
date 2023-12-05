@@ -1,6 +1,6 @@
 {
   "name": "netlify-plugin-critical-css",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Netlify Build plugin - quickly extract and inline your critical CSS using concurrency, built on top of the `critical` package.",
   "license": "MIT",
   "author": "Thinkflo",
