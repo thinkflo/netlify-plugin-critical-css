@@ -1,0 +1,59 @@
+name: netlify-plugin-critical-css
+inputs:
+  - name: base
+    required: false
+    description: Path from where build files will be extracted
+    default: 'build'
+  - name: globs
+    required: false
+    description:
+      An array of globs. Only files and directories that match
+      at least one of the provided globs will be returned.
+    default: ['**/*.html']
+  - name: dimensions
+    required: false
+    description:
+      An array of objects containing `width` and `height`
+      properties to deliver critical CSS for multiple screen resolutions.
+    default:
+      [
+        { width: 375, height: 1200 },
+        { width: 1024, height: 1400 },
+        { width: 1280, height: 1500 }
+      ]
+  - name: ignore
+    description:
+      An array of globs. Files and directories that match at
+      least one of the provided globs will be pruned while searching.
+    required: false
+    default: ['node_modules', '_app', '_next']
+  - name: ignoreCssRules
+    required: false
+    description:
+      A JSON stringified object or array of ignore CSS rules. See
+      postcss-discard for usage examples. If you pass an array all rules will be
+      applied to atrules, rules and declarations
+    default: ['@font-face']
+  - name: concurrency
+    description:
+      You can configure the maximum number of tasks being processed in parallel.
+      The default concurrency is 3.
+    required: false
+    default: 3
+  - name: taskTimeout
+    description:
+      Configure a millisecond timeout in which a task must finish processing. A
+      task that times out is marked as failed. A configured timeout is
+      configured for each task, not for the whole pool.
+    required: false
+    default: 2000
+  - name: showProgressBar
+    description:
+      Output a progress bar when the plugin is rendering Critical CSS to all of
+      the found pages
+    required: false
+    default: true
+  - name: silent
+    description: Surpress all console logging
+    required: false
+    default: false
