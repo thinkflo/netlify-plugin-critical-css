@@ -1,6 +1,6 @@
 {
   "name": "netlify-plugin-critical-css",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Netlify Build plugin - quickly extract and inline your critical CSS using concurrency, built on top of the `critical` package.",
   "license": "MIT",
   "author": "Thinkflo",
@@ -32,7 +32,10 @@
     "ava": "cross-env FORCE_COLOR=1 ava --verbose",
     "release": "release-it"
   },
-  "repository": "https://github.com/thinkflo/netlify-plugin-critical-css",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thinkflo/netlify-plugin-critical-css.git"
+  },
   "directories": {
     "lib": "src",
     "test": "test"

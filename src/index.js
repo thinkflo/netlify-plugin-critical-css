@@ -47,7 +47,7 @@ const updateProgressBar = (
 
 const pluralize = (number) => (number === 1 ? '' : 's')
 
-export const onPreBuild = async ({ constants, inputs }) => {
+export const onPostBuild = async ({ constants, inputs }) => {
   const {
     silent = false,
     showProgressBar = true,
